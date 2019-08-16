@@ -17,7 +17,7 @@ In order to use this compose file (docker-compose.yml) you must have:
 **1. Clone this repository**
 
 ```shell
-git clone https://github.com/nicoroud/docker-nexcloud.git
+git clone https://github.com/nicoroud/nexcloud.git
 ```
 
 **2. Modify the .env file to suite your needs**
