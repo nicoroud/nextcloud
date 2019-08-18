@@ -159,6 +159,7 @@ RUN set -ex; \
     \
     apt-get update; \
     apt-get install -y --no-install-recommends \
+        nano \
         ffmpeg \
         imagemagick \
         libmagickcore-6.q16-3-extra \
