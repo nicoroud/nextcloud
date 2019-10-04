@@ -1,3 +1,4 @@
+# Nextcloud from offical image at https://github.com/nextcloud/docker/
 FROM php:7.3-apache-buster
 
 # entrypoint.sh and cron.sh dependencies
@@ -110,7 +111,7 @@ RUN a2enmod rewrite remoteip ;\
     } > /etc/apache2/conf-available/remoteip.conf;\
     a2enconf remoteip
 
-ENV NEXTCLOUD_VERSION 17.0
+ENV NEXTCLOUD_VERSION 17.0.0
 
 RUN set -ex; \
     fetchDeps=" \
