@@ -18,7 +18,7 @@ RUN set -ex; \
 # install the PHP extensions we need
 # see https://docs.nextcloud.com/server/stable/admin_manual/installation/source_installation.html
 ENV PHP_MEMORY_LIMIT 512M
-ENV PHP_UPLOAD_LIMIT 512
+ENV PHP_UPLOAD_LIMIT 512M
 RUN set -ex; \
     \
     savedAptMark="$(apt-mark showmanual)"; \
