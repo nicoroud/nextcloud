@@ -60,9 +60,9 @@ RUN set -ex; \
     ; \
     \
 # pecl will claim success even if one install fails, so we need to perform each install separately
-    pecl install APCu-5.1.19; \
+    pecl install APCu-5.1.20; \
     pecl install memcached-3.1.5; \
-    pecl install redis-5.3.3; \
+    pecl install redis-5.3.4; \
     pecl install imagick-3.4.4; \
     \
     docker-php-ext-enable \
@@ -71,6 +71,7 @@ RUN set -ex; \
         redis \
         imagick \
     ; \
+    rm -r /tp/pear; \
     \
 # reset apt-mark's "manual" list so that "purge --auto-remove" will remove all build dependencies
     apt-mark auto '.*' > /dev/null; \
@@ -120,7 +121,7 @@ RUN a2enmod headers rewrite remoteip ;\
     } > /etc/apache2/conf-available/remoteip.conf;\
     a2enconf remoteip
 
-ENV NEXTCLOUD_VERSION 20.0.8
+ENV NEXTCLOUD_VERSION 20.0.9
 
 RUN set -ex; \
     fetchDeps=" \
